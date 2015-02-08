@@ -56,4 +56,4 @@ $ORIGIN %s.
                 IN      MX      0 mail.%s.
 mail            IN      A       %s
 webmail         IN      A       %s
-www             IN      A       %s \n \n""" % domain, domain, time, domain, ipMail, domain, ipMail, ipWWW, ipWWW)
+www             IN      A       %s \n \n""" % (domain, domain, time, domain, ipWWW, domain, ipMail, ipWWW, ipWWW))
