@@ -61,3 +61,9 @@ $ORIGIN %s.
 mail            IN      A       %s
 webmail         IN      A       %s
 www             IN      A       %s \n \n""" % (domain, domain, serial, domain, ipWWW, domain, ipMail, ipWWW, ipWWW))
+
+# zonefd = os.open( "/etc/bind/%s" % zoneFile)
+zoneFd.open("/home/brandon/tmp/%s" % zoneFile)
+zoneFd.fchown(zoneFd, 119, 124)
+print "Changed ownership successfully!"
+zoneFd.close (zoneFd)
