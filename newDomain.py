@@ -7,9 +7,14 @@ __maintainer__ = "Brandon Bianchi"
 __email__ = "brandon@brandonbianchi.com"
 __status__ = "Production"
 
-# Set time in desired format
+# Imports
+
+from config import *
 import time
-print time.strftime('%Y%m%d')
+
+# Set time in desired format
+serial = time.strftime('%Y%m%d')
+print (serial)
 
 # Grab domain information, store values
 domain = raw_input('Enter new domain name (no www): \n')
@@ -24,7 +29,6 @@ print(domain, prefix, tld)
 print("\n")
 
 # Get IP information for DNS
-from config import *
 ipWWW = raw_input('Enter www IP (I am %s): \n' % ipWebMe) 
 ipMail = raw_input('Enter mail IP (I am %s): \n' % ipMailMe)
 
@@ -56,4 +60,4 @@ $ORIGIN %s.
                 IN      MX      0 mail.%s.
 mail            IN      A       %s
 webmail         IN      A       %s
-www             IN      A       %s \n \n""" % (domain, domain, time, domain, ipWWW, domain, ipMail, ipWWW, ipWWW))
+www             IN      A       %s \n \n""" % (domain, domain, serial, domain, ipWWW, domain, ipMail, ipWWW, ipWWW))
